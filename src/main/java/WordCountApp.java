@@ -17,6 +17,7 @@ public class WordCountApp {
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
         job.setMapperClass(WordMapper.class);
         job.setReducerClass(WordReducer.class);
+        job.setInputFormatClass();
         job.setOutputKeyClass(Text.class); //change
         job.setOutputValueClass(IntWritable.class); //change
         job.setNumReduceTasks(2);
