@@ -3,7 +3,7 @@ import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Mapper;
 
 
-public class WordMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
+public class WordMapper extends AirportIdMapper<LongWritable, Text, Text, IntWritable> {
     @Override
     protected void map(LongWritable key, Text value, Context context) throws
             IOException, InterruptedException {
