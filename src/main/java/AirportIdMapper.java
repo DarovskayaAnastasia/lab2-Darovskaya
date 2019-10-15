@@ -10,6 +10,6 @@ public class AirportIdMapper extends Mapper<LongWritable, Text, Text, Text> {
         String record = value.toString();
         String[] parts =
                 record.split(",");
-            context.write(new Text(word), new IntWritable(1));
+         context.write(new Text(parts[0]), new Text("airport_name    " + parts[1]));
     }
 }
