@@ -3,9 +3,9 @@ import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Mapper;
 
 
-public class AirportIdMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
+public class AirportIdMapper extends Mapper<LongWritable, Text, Text, Text> {
     @Override
-    protected void map(LongWritable key, Text value, Context context) throws
+    protected void map(Object key, Text value, Context context) throws
             IOException, InterruptedException {
         String line = value.toString();
         String[] words =
