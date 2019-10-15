@@ -10,7 +10,7 @@ public class WritableCSV  {
 
     }
     CSVRecord[] parseCSV(String path) {
-        CSVRecord[] records = new CSVRecord[];
+        CSVRecord[] records;
         File source = new File(path);
         CSVParser parser = CSVParser.parse(source, StandardCharsets.UTF_8, CSVFormat.RFC4180);
         for (CSVRecord record : parser) {
