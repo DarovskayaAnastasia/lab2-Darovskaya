@@ -9,12 +9,11 @@ public class WritableCSV  {
     public static void main(String[] args) throws IOException {
 
     }
-    CSVRecord[] parseCSV(String path) {
-        CSVRecord[] records;
+    String[] parseCSV(String path) {
+        String[] records;
         File source = new File(path);
         CSVParser parser = CSVParser.parse(source, StandardCharsets.UTF_8, CSVFormat.RFC4180);
         for (CSVRecord record : parser) {
-            
         }
     }
 }
