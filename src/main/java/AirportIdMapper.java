@@ -7,11 +7,9 @@ public class AirportIdMapper extends Mapper<LongWritable, Text, Text, Text> {
     @Override
     protected void map(Object key, Text value, Context context) throws
             IOException, InterruptedException {
-        String line = value.toString();
-        String[] words =
-                line.toLowerCase().split("[^\\p{L}-0-9']");
-        for (String word : words) {
+        String record = value.toString();
+        String[] parts =
+                record.split(",");
             context.write(new Text(word), new IntWritable(1));
-        }
     }
 }
