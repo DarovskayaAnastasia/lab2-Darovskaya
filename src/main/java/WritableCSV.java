@@ -8,14 +8,16 @@ import java.nio.charset.StandardCharsets;
 
 public class WritableCSV  {
     public static void main(String[] args) throws IOException {
-
+        Vector records = parseCSV();
     }
-    String[] parseCSV(String path) {
+    Vector parseCSV(String path) throws IOException {
         Vector records = new Vector();
         File source = new File(path);
         CSVParser parser = CSVParser.parse(source, StandardCharsets.UTF_8, CSVFormat.RFC4180);
         for (CSVRecord record : parser) {
             records.addElement(record);
         }
+
+        return records;
     }
 }
