@@ -10,7 +10,7 @@ public class WritableCSV {
     public static void main(String[] args) throws IOException {
         CSVParser records = parseCSV("src/main/resources/L_AIRPORT_ID.csv");
         for (CSVRecord record : records) {
-            System.out.println(record.get(1));
+            System.out.println(record.get(0));
         }
     }
     static CSVParser parseCSV(String path) throws IOException {
