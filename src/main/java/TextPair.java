@@ -28,7 +28,7 @@ public class TextPair implements WritableComparable<TextPair> {
     }
 
     @SuppressWarnings("unused")
-    public int getID() {
+    public Integer getID() {
         return this.ID;
     }
 
