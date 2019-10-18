@@ -3,10 +3,12 @@ import org.apache.hadoop.io.WritableComparable;
 public class TextPair implements WritableComparable<TextPair> {
 
     private int ID;
-    private byte Name;
+    private byte DATA;
 
     public TextPair(int, byte) {
         this.ID = ID;
-        this.Name 
+        this.DATA = DATA;
     }
+
+    
 }
