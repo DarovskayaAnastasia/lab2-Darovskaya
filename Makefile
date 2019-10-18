@@ -1,6 +1,7 @@
+HOME = home/michail
+
 NAMENODE_CURRENT = home/michail/hdata/namenode/current
 DATANODE_CURRENT = home/michail/hdata/datanode/current
-HOME = home/michail
 OUTPUT = $(HOME)/gitwatch/lab2-Darovskaya/output
 TARGET = $(HOME)/gitwatch/lab2-Darovskaya/target
 T_ONTIME = $(HOME)/gitwatch/lab2-Darovskaya/src/main/resources/664600583_T_ONTIME_sample.csv
