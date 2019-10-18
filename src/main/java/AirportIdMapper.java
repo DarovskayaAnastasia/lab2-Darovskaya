@@ -11,9 +11,9 @@ public class AirportIdMapper extends Mapper<LongWritable, Text, TextPair, Text> 
     protected void map(LongWritable key, Text value, Context context) throws
             IOException, InterruptedException {
         String line = value.toString();
-        String[] textPair = parseLine(line);
+        String[] keyValuePair = parseLine(line);
 
-        context.write(, new Text(textPair[1]));
+        context.write(, new Text(keyValuePair[1]));
     }
 
     private static String[] parseLine(String line) throws IOException {
