@@ -30,4 +30,3 @@ clean:
 	stop-yarn.sh
 	stop-dfs.s
 	rm -rf  $(DATANODE_CURRENT) $(NAMENODE_CURRENT) $(TARGET) $(OUTPUT)
-h
