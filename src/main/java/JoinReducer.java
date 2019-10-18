@@ -15,7 +15,7 @@ public class JoinReducer extends Reducer<TextPair, Text, IntWritable, Text> {
 
             float delay = Float.valueOf(iter.next().toString());
 
-            
+            averageDelay += delay;
 
             if (delay > maxDelay) {
                 maxDelay = delay;
