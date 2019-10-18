@@ -12,7 +12,7 @@ public class AirportIdMapper extends Mapper<LongWritable, Text, TextPair, Text> 
             IOException, InterruptedException {
         String line = value.toString();
         String[] keyValuePair = parseLine(line);
-
+        
         TextPair indicatoredKey = new TextPair(Integer.decode(keyValuePair[0]), (byte)0);
         context.write(indicatoredKey, new Text(keyValuePair[1]));
     }
