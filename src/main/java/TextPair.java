@@ -9,23 +9,27 @@ public class TextPair implements WritableComparable<TextPair> {
     private int ID;
     private byte DATA;
 
-    public TextPair() {
-        this.ID = 0;
-        this.DATA = (byte)0;
-    }
-
-    public TextPair(int ID, byte DATA) {
+    public TextPair(int, byte) {
         this.ID = ID;
         this.DATA = DATA;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public int getID() {
         return this.ID;
     }
 
+    public void setDATA(byte DATA) {
+        this.DATA = DATA;
+    }
+
     public byte getDATA() {
         return this.DATA;
     }
+
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
@@ -47,5 +51,15 @@ public class TextPair implements WritableComparable<TextPair> {
     @Override
     public int compareTo(TextPair textPair) {
         return 0;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }
