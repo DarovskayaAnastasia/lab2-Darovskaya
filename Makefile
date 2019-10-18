@@ -28,5 +28,5 @@ launch_stage:
 
 clean:
 	stop-yarn.sh
-	stop-dfs.s
+	stop-dfs.sh
 	rm -rf  $(DATANODE_CURRENT) $(NAMENODE_CURRENT) $(TARGET) $(OUTPUT)
