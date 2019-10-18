@@ -6,6 +6,7 @@ public class TextPair implements WritableComparable<TextPair> {
     private byte Name;
 
     public TextPair(int, byte) {
-        this.ID =
+        this.ID = ID;
+        this.Name 
     }
 }
