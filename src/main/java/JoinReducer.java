@@ -19,7 +19,7 @@ public class JoinReducer extends Reducer<TextPair, Text, IntWritable, Text> {
         while (iter.hasNext()) {
 
             n++;
-            float delay = Float.valueOf(iter.next().toString());
+            float delay = Float.parseFloat(iter.next().toString());
 
             averageDelay += delay;
 
