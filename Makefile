@@ -23,5 +23,4 @@ launch_stage:
 clean:
 	stop-yarn.sh
 	stop-dfs.sh
-	rm -r output target
 	hadoop fs -rm -r output 664600583_T_ONTIME_sample.csv L_AIROPORT_ID.csv
