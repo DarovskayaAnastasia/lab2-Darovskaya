@@ -9,10 +9,13 @@ public class WritableCSV {
     public static void main(String[] args) throws IOException {
         CSVParser airports = parseCSV("src/main/resources/L_AIRPORT_ID.csv");
         for (CSVRecord airport : airports) {
-            System.out.println(airport.get(0));
+            System.out.println("id: " + airport.get(0) + "; name: " + airport.get(1));
         }
 
-        CSVParser delays = parseCSV("src/main/resources/")
+        CSVParser delays = parseCSV("src/main/resources/664600583_T_ONTIME_sample");
+        for (CSVRecord delay : delays) {
+            System.out.println("id: " + delay.get(14) + "desr" delay.get(14));
+        }
     }
     static CSVParser parseCSV(String path) throws IOException {
         File source = new File(path);
