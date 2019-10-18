@@ -55,7 +55,7 @@ public class TextPair implements WritableComparable<TextPair> {
 
     @Override
     public int compareTo(TextPair textPair) {
-        return 0;
+        return this.toString().compareTo(textPair.toString());
     }
 
     @Override
