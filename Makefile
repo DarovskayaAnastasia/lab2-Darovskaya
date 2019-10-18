@@ -10,19 +10,19 @@ AIROPORT_ID = $(HOME)src/main/resources/L_AIROPORT_ID.csv
 all: hadoop_stage launch_stage
 
 hadoop_stage:
-        start-dfs.sh
-        start-yarn.sh
+	start-dfs.sh
+	start-yarn.sh
 
 launch_stage:
-        mvn package
-        hadoop fs -copyFromLocal $(AIROPORT_ID) $(T_ONTIME)
-        export HADOOP_CLASSPATH=$(TARGET)/*.jar
-        hadoop JoinJob 664600583_T_ONTIME_sample.csv L_AIRPORT_ID.csv output
-        hadoop fs -copyToLocal output
+	mvn package
+	hadoop fs -copyFromLocal $(AIROPORT_ID) $(T_ONTIME)
+	export HADOOP_CLASSPATH=$(TARGET)/*.jar
+	hadoop JoinJob 664600583_T_ONTIME_sample.csv L_AIRPORT_ID.csv output
+	hadoop fs -copyToLocal output
 
 clean:
-        stop-yarn.sh
-        stop-dfs.sh
+	stop-yarn.sh
+	stop-dfs.sh
 	rm -r output target
 	hadoop fs -rm -r output 664600583_T_ONTIME_sample.csv L_AIROPORT_ID.csv
 
