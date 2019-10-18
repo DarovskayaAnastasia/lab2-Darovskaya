@@ -9,7 +9,12 @@ public class TextPair implements WritableComparable<TextPair> {
     private int ID;
     private byte DATA;
 
-    public TextPair(int, byte) {
+    public TextPair() {
+        ID = 0;
+        DATA = (byte)0;
+    }
+
+    public TextPair(int ID, byte DATA) {
         this.ID = ID;
         this.DATA = DATA;
     }
