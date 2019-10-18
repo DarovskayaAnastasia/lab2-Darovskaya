@@ -1,4 +1,4 @@
-import org.apache.hadoop.io.RawComparator;
+import org.apache.hadoop.io.WritableComparable;
 
-public class FirstComparator implements RawComparator {
+public class FirstComparator implements WritableComparable<K, V> {
 }
