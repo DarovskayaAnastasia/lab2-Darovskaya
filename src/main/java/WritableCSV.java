@@ -37,7 +37,7 @@ import java.nio.charset.StandardCharsets;
 
 public class WritableCSV {
     public static void main(String[] args) throws IOException {
-        String line = " \"10001\",\"Afognak Lake, AK: Afognak Lake Airport\" ";
+        String line = "\"10001\",\"Afognak Lake, AK: Afognak Lake Airport\"";
 
         CSVParser airports = parseCSV(line);
         for (CSVRecord airport : airports) {
