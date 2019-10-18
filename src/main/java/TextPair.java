@@ -6,20 +6,20 @@ import java.io.IOException;
 
 public class TextPair implements WritableComparable<TextPair> {
 
-    private int ID;
-    private byte DATA;
+    private Integer ID;
+    private Byte DATA;
 
     public TextPair() {
         ID = 0;
         DATA = (byte)0;
     }
 
-    public TextPair(int ID, byte DATA) {
+    public TextPair(Integer ID, Byte DATA) {
         this.ID = ID;
         this.DATA = DATA;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -27,7 +27,7 @@ public class TextPair implements WritableComparable<TextPair> {
         return this.ID;
     }
 
-    public void setDATA(byte DATA) {
+    public void setDATA(Byte DATA) {
         this.DATA = DATA;
     }
 
@@ -38,14 +38,14 @@ public class TextPair implements WritableComparable<TextPair> {
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        ID.write(dataOutput);
-        DATA.write(dataOutput);
+        dataOutput.writeInt(this.ID);
+        dataOutput.writeByte(this.DATA);
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
-        ID.readFields(dataInput);
-        DATA.readFields(dataInput);
+        this.ID = dataInput.readInt();
+        this.DATA = dataInput.readByte();
     }
 
     @Override
