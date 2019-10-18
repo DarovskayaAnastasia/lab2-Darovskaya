@@ -14,7 +14,7 @@ public class OnTimeMapper extends Mapper<LongWritable, Text, TextPair, Text> {
         String[] keyValuePair = parseLine(line);
 
         if (keyValuePair[0] != "Code") {
-            TextPair indicatoredKey = new TextPair(Integer.decode(keyValuePair[0]), (byte) 0);
+            TextPair indicatoredKey = new TextPair(Integer.decode(keyValuePair[0]), (byte) 1);
             context.write(indicatoredKey, new Text(keyValuePair[1]));
         }
 
