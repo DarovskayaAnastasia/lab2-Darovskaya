@@ -41,7 +41,7 @@ public class TextPair implements WritableComparable<TextPair> {
 
     @Override
     public String toString() {
-        return super.toString();
+        return this.ID.toString() + this.DATA.toString();
     }
 
     @Override
