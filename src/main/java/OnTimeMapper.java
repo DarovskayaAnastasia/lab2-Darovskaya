@@ -6,7 +6,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Mapper;
 
-public class OnTimeMapper extends Mapper<Object, Text, Text, Text> {
+public class OnTimeMapper extends Mapper<LongWritable, Text, Text, Text> {
     @Override
     protected void map(LongWritable key, Text value, Context context) throws
             IOException, InterruptedException {
