@@ -13,8 +13,8 @@ public class AirportIdMapper extends Mapper<LongWritable, Text, TextPair, Text> 
         String line = value.toString();
         String[] keyValuePair = parseLine(line);
 
-        TextPair indicatoredKey
-        context.write(, new Text(keyValuePair[1]));
+        TextPair indicatoredKey = 
+        context.write(indicatoredKey, new Text(keyValuePair[1]));
     }
 
     private static String[] parseLine(String line) throws IOException {
