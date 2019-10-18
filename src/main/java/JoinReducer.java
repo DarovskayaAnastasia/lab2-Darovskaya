@@ -11,8 +11,9 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
         Text systemInfo = new Text(iter.next());
 
         while (iter.hasNext()) {
+
             float delay = Float.valueOf(iter.next().toString());
-            
+
             Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
             context.write(key.getFirst(), outValue);
         }
