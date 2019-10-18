@@ -14,7 +14,7 @@ public class WritableCSV {
 
         CSVParser delays = parseCSV("src/main/resources/664600583_T_ONTIME_sample");
         for (CSVRecord delay : delays) {
-            System.out.println("id: " + delay.get(14) + "desr" delay.get(14));
+            System.out.println("id: " + delay.get(14) + "dest " + delay.get(14));
         }
     }
     static CSVParser parseCSV(String path) throws IOException {
