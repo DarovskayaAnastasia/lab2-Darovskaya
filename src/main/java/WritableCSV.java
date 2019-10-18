@@ -7,10 +7,12 @@ import java.nio.charset.StandardCharsets;
 
 public class WritableCSV {
     public static void main(String[] args) throws IOException {
-        CSVParser records = parseCSV("src/main/resources/L_AIRPORT_ID.csv");
-        for (CSVRecord record : records) {
-            System.out.println(record.get(0));
+        CSVParser airports = parseCSV("src/main/resources/L_AIRPORT_ID.csv");
+        for (CSVRecord airport : airports) {
+            System.out.println(airport.get(0));
         }
+
+        CSVParser delays = parseCSV("src/main/resources/")
     }
     static CSVParser parseCSV(String path) throws IOException {
         File source = new File(path);
