@@ -7,18 +7,18 @@ import java.io.IOException;
 public class TextPair implements WritableComparable<TextPair> {
 
     private Integer ID;
-    private Byte DATA;
+    private Byte INDICATOR;
 
     @SuppressWarnings("unused")
     public TextPair() {
         ID = 0;
-        DATA = (byte)0;
+        INDICATOR = (byte)0;
     }
 
     @SuppressWarnings("unused")
-    public TextPair(Integer ID, Byte DATA) {
+    public TextPair(Integer ID, Byte INDICATOR) {
         this.ID = ID;
-        this.DATA = DATA;
+        this.INDICATOR = INDICATOR;
     }
 
     @SuppressWarnings("unused")
@@ -32,31 +32,31 @@ public class TextPair implements WritableComparable<TextPair> {
     }
 
     @SuppressWarnings("unused")
-    public void setDATA(Byte DATA) {
-        this.DATA = DATA;
+    public void setINDICATOR(Byte INDICATOR) {
+        this.INDICATOR = INDICATOR;
     }
 
     @SuppressWarnings("unused")
-    public byte getDATA() {
-        return this.DATA;
+    public byte getINDICATOR() {
+        return this.INDICATOR;
     }
 
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
         dataOutput.writeInt(this.ID);
-        dataOutput.writeByte(this.DATA);
+        dataOutput.writeByte(this.INDICATOR);
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
         this.ID = dataInput.readInt();
-        this.DATA = dataInput.readByte();
+        this.INDICATOR = dataInput.readByte();
     }
 
     @Override
     public String toString() {
-        return this.ID.toString() + this.DATA.toString();
+        return this.ID.toString() + this.INDICATOR.toString();
     }
 
     @Override
