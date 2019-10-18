@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff51178-d2da-4d74-9fa5-dc60622839ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/HashPartitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HashPartitioner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TextPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TextPair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FirstComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FirstComparator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +23,11 @@
   <component name="ProjectId" id="1SN6otUnRu2kuf3XUDZtrFMtFfV" />
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
