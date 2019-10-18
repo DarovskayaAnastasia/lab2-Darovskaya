@@ -9,6 +9,10 @@ import java.nio.charset.StandardCharsets;
 public class WritableCSV {
     public static void main(String[] args) throws IOException {
         Vector records = parseCSV("src/main/resources/L_AIRPORT_ID.csv");
+        int length = records.size();
+        for (int i = 0; i < length; ++i) {
+            System.out.println();
+        }
     }
     static Vector parseCSV(String path) throws IOException {
         Vector records = new Vector();
