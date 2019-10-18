@@ -12,10 +12,13 @@ public class JoinReducer extends Reducer<TextPair, Text, IntWritable, Text> {
         Text systemInfo = new Text(iter.next());
 
         float maxDelay = Float.MIN_VALUE;
-        float minDelay = Float.MAX_VALUE
+        float minDelay = Float.MAX_VALUE;
+        float averageDelay = 0;
+        int n = 0;
 
         while (iter.hasNext()) {
 
+            n++;
             float delay = Float.valueOf(iter.next().toString());
 
             averageDelay += delay;
@@ -26,6 +29,8 @@ public class JoinReducer extends Reducer<TextPair, Text, IntWritable, Text> {
             else if (delay < minDelay) {
                 minDelay = delay;
             }
+
+            averageDelay /= n;
         }
 
         context.write();
