@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/JoinReducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JoinReducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/OnTimeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OnTimeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TextPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TextPair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WritableCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WritableCSV.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

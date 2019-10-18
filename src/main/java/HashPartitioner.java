@@ -1,7 +1,7 @@
-import org.apache.hadoop.mapreduce.Partitioner;
-
-public class HashPartitioner<TextPair, V> extends Partitioner<TextPair, V> {
-    public int getPartition(TextPair key, V value, int numReduceTasks) {
-        return (key.hashCode() & Integer.MAX_VALUE) % numReduceTasks;
-    }
-}
+//import org.apache.hadoop.mapreduce.Partitioner;
+//
+//public class HashPartitioner<TextPair, V> extends Partitioner<TextPair, V> {
+//    public int getPartition(TextPair key, V value, int numReduceTasks) {
+//        return (key.hashCode() & Integer.MAX_VALUE) % numReduceTasks;
+//    }
+//}

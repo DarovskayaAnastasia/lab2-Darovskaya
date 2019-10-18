@@ -7,7 +7,9 @@ import java.nio.charset.StandardCharsets;
 
 public class WritableCSV {
     public static void main(String[] args) throws IOException {
-        CSVParser airports = parseCSV("10001","Afognak Lake, AK: Afognak Lake Airport");
+        String line = " \"10001\",\"Afognak Lake, AK: Afognak Lake Airport\" ";
+
+        CSVParser airports = parseCSV(line);
         for (CSVRecord airport : airports) {
 //            System.out.println("id: " + airport.get(0) + "; name: " + airport.get(1));
         }
@@ -19,7 +21,7 @@ public class WritableCSV {
     }
     static CSVParser parseCSV(String line) throws IOException {
 
-        CSVParser parser = CSVParser.parse(line, StandardCharsets.UTF_8, CSVFormat.RFC4180);
+        CSVParser parser = CSVParser.parse(line, CSVFormat.RFC4180);
         for (CSVRecord record : parser) {
             System.out.println(record);
         }
