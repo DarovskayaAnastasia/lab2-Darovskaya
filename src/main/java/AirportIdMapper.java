@@ -13,17 +13,6 @@ public class AirportIdMapper extends Mapper<LongWritable, Text, TextPair, Text> 
     protected void map(Object key, Text value, Context context) throws
             IOException, InterruptedException {
         String record = value.toString();
-        CSVParser records = parseCSV("src/main/resources/L_AIRPORT_ID.csv");
-
-        String[] parts =
-                record.split(",");
-         context.write(new Text(parts[0]), new Text("airport_name    " + parts[1]));
-    }
-
-    static CSVParser parseCSV(String path) throws IOException {
-        File source = new File(path);
-        CSVParser parser = CSVParser.parse(source, StandardCharsets.UTF_8, CSVFormat.RFC4180);
-
-        return parser;
+        String[] idName
     }
 }

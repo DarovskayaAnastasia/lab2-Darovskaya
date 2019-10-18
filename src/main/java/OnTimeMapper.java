@@ -8,7 +8,7 @@ public class OnTimeMapper extends Mapper<Object, Text, Text, Text> {
             IOException, InterruptedException {
 
         String record = value.toString();
-        String[] idName = ;
+        String[] idDelay = ;
         context.write(new Text(), new Text());
     }
 }
