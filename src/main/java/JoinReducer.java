@@ -33,6 +33,10 @@ public class JoinReducer extends Reducer<TextPair, Text, IntWritable, Text> {
             averageDelay /= n;
         }
 
-        context.write(new IntWritable(key.getID()), new Text(name + ": " + "min delay time = " + minDelay + "; max delay time = " + maxDelay + "; average delay time = " + averageDelay + ";"));
+        context.write(new IntWritable(key.getID()), new Text(name + ": "
+                + "min delay time = " + minDelay
+                + "; max delay time = " + maxDelay
+                + "; average delay time = " + averageDelay
+                + ";"));
     }
 }
