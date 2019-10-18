@@ -1,10 +1,10 @@
 NAMENODE_CURRENT = home/michail/hdata/namenode/current
 DATANODE_CURRENT = home/michail/hdata/datanode/current
-HOME = /home/michail/gitwatch/lab2-Darovskaya
-OUTPUT = $(HOME)/output
-TARGET = $(HOME)/target
-T_ONTIME = $(HOME)/src/main/resources/664600583_T_ONTIME_sample.csv
-AIROPORT_ID = $(HOME)/src/main/resources/L_AIROPORT_ID.csv
+HOME = /home/michail
+OUTPUT = $(HOME)/gitwatch/lab2-Darovskaya/output
+TARGET = $(HOME)/gitwatch/lab2-Darovskaya/target
+T_ONTIME = $(HOME)/gitwatch/lab2-Darovskaya/src/main/resources/664600583_T_ONTIME_sample.csv
+AIROPORT_ID = $(HOME/)gitwatch/lab2-Darovskaya/src/main/resources/L_AIROPORT_ID.csv
 
 
 .PHONY: all hadoop_stage launch_stage clean
