@@ -15,8 +15,16 @@ public class JoinReducer extends Reducer<TextPair, Text, IntWritable, Text> {
 
             float delay = Float.valueOf(iter.next().toString());
 
-            Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
-            context.write(key.getFirst(), outValue);
+            
+
+            if (delay > maxDelay) {
+                maxDelay = delay;
+            }
+            else if (delay < minDelay) {
+                minDelay = delay;
+            }
         }
+
+        context.write();
     }
 }
