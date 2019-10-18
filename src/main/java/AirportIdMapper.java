@@ -1,4 +1,10 @@
+import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Mapper;
 
@@ -10,5 +16,15 @@ public class AirportIdMapper extends Mapper<Object, Text, Text, Text> {
         String[] parts =
                 record.split(",");
          context.write(new Text(parts[0]), new Text("airport_name    " + parts[1]));
+        CSVParser records = parseCSV("src/main/resources/L_AIRPORT_ID.csv");
+        for (CSVRecord record : records) {
+            System.out.println(record.get(0));
+        }
+    }
+    static CSVParser parseCSV(String path) throws IOException {
+        File source = new File(path);
+        CSVParser parser = CSVParser.parse(source, StandardCharsets.UTF_8, CSVFormat.RFC4180);
+
+        return parser;
     }
 }
