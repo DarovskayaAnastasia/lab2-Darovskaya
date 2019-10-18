@@ -14,7 +14,6 @@ public class AirportIdMapper extends Mapper<Object, Text, WritableComparable, Te
             IOException, InterruptedException {
         String record = value.toString();
         CSVParser records = parseCSV("src/main/resources/L_AIRPORT_ID.csv");
-        String parts[] =
 
         String[] parts =
                 record.split(",");
