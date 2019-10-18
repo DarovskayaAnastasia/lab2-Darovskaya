@@ -9,8 +9,10 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text> {
             IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
         Text systemInfo = new Text(iter.next());
+
         while (iter.hasNext()) {
-            Text call = iter.next();
+            float delay = Float.valueOf(iter.next().toString());
+            
             Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
             context.write(key.getFirst(), outValue);
         }
