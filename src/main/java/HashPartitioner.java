@@ -1,4 +1,4 @@
-package lab2Darovskaya;
+package lab2-Darovskaya;
 
 import org.apache.hadoop.mapreduce.Partitioner;
 
