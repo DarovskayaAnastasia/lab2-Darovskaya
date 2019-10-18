@@ -12,7 +12,7 @@ public class WritableCSV {
             System.out.println("id: " + airport.get(0) + "; name: " + airport.get(1));
         }
 
-        CSVParser delays = parseCSV("src/main/resources/664600583_T_ONTIME_sample");
+        CSVParser delays = parseCSV("src/main/resources/664600583_T_ONTIME_sample.csv");
         for (CSVRecord delay : delays) {
             System.out.println("id: " + delay.get(14) + "dest " + delay.get(14));
         }
