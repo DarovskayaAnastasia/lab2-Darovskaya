@@ -8,7 +8,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Mapper;
 
-public class AirportIdMapper extends Mapper<Object, Text, WritableComparable, Text> {
+public class AirportIdMapper extends Mapper<LongWritable, Text, TextPair, Text> {
     @Override
     protected void map(Object key, Text value, Context context) throws
             IOException, InterruptedException {
