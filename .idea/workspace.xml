@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff51178-d2da-4d74-9fa5-dc60622839ff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/AirportIdMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AirportIdMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HashPartitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HashPartitioner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JoinJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JoinJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JoinReducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JoinReducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OnTimeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OnTimeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TextPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TextPair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WritableCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WritableCSV.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
