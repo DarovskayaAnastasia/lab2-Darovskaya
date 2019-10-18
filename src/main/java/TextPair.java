@@ -63,14 +63,14 @@ public class TextPair implements WritableComparable<TextPair> {
     public int compareTo(TextPair textPair) {
         return this.toString().compareTo(textPair.toString());
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
+//
+//    @Override
+//    public boolean equals(Object obj) {
+//        return super.equals(obj);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return super.hashCode();
+//    }
 }
