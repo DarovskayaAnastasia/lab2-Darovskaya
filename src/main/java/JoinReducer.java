@@ -21,13 +21,14 @@ public class JoinReducer extends Reducer<TextPair, Text, IntWritable, Text> {
             n++;
             float delay = Float.parseFloat(iter.next().toString());
 
-            averageDelay += delay;
+            if ( delay >= 0 ) {
+                averageDelay += delay;
 
-            if (delay > maxDelay) {
-                maxDelay = delay;
-            }
-            else if (delay < minDelay) {
-                minDelay = delay;
+                if (delay > maxDelay) {
+                    maxDelay = delay;
+                } else if (delay < minDelay) {
+                    minDelay = delay;
+                }
             }
 
             averageDelay /= n;
