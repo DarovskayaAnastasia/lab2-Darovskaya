@@ -27,7 +27,7 @@ public class OnTimeMapper extends Mapper<LongWritable, Text, TextPair, Text> {
         CSVParser parser = CSVParser.parse(line, CSVFormat.RFC4180);
         for (CSVRecord record : parser) {
             textPair[0] = record.get(0);
-            textPair[1] = record.get(1);
+            textPair[1] = record.get(18);
         }
 
         return textPair;
