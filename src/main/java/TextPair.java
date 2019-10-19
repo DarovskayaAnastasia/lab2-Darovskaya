@@ -1,6 +1,4 @@
 import org.apache.hadoop.io.WritableComparable;
-import org.apache.hadoop.mapreduce.Partitioner;
-
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
@@ -63,15 +61,5 @@ public class TextPair implements WritableComparable<TextPair> {
     @Override
     public int compareTo(TextPair textPair) {
         return this.toString().compareTo(textPair.toString());
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
     }
 }
