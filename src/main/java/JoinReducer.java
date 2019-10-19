@@ -17,22 +17,21 @@ public class JoinReducer extends Reducer<TextPair, Text, IntWritable, Text> {
         int n = 0;
 
         while (iter.hasNext()) {
-            if (iter.next().toString() != "") {
-                n++;
-                float delay = Float.parseFloat(iter.next().toString());
 
-                if (delay >= 0) {
-                    averageDelay += delay;
+            n++;
+            float delay = Float.parseFloat(iter.next().toString());
 
-                    if (delay > maxDelay) {
-                        maxDelay = delay;
-                    } else if (delay < minDelay) {
-                        minDelay = delay;
-                    }
+            if ( delay >= 0 ) {
+                averageDelay += delay;
+
+                if (delay > maxDelay) {
+                    maxDelay = delay;
+                } else if (delay < minDelay) {
+                    minDelay = delay;
                 }
-
-                averageDelay /= n;
             }
+
+            averageDelay /= n;
         }
 
         context.write(new IntWritable(key.getID()), new Text(name + ": "
