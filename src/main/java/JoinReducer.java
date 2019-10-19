@@ -11,12 +11,24 @@ public class JoinReducer extends Reducer<TextPair, Text, IntWritable, Text> {
         Iterator<Text> iter = values.iterator();
         Text name = new Text(iter.next());
 
+        float maxDelay = Float.MIN_VALUE;
+        float minDelay = Float.MAX_VALUE;
+        float averageDelay = 0;
         int n = 0;
 
         while (iter.hasNext()) {
 
             n++;
             float delay = Float.parseFloat(iter.next().toString());
+
+            averageDelay += delay;
+
+            if (delay > maxDelay) {
+                maxDelay = delay;
+            }
+            else if (delay < minDelay) {
+                minDelay = delay;
+            }
 
             averageDelay /= n;
         }
@@ -26,19 +38,5 @@ public class JoinReducer extends Reducer<TextPair, Text, IntWritable, Text> {
                 + "; max delay time = " + maxDelay
                 + "; average delay time = " + averageDelay
                 + ";"));
-    }
-
-    int[] searchDelay(float delay) {
-        float maxDelay = Float.MIN_VALUE;
-        float minDelay = Float.MAX_VALUE;
-        float averageDelay = 0;
-        averageDelay += delay;
-
-        if (delay > maxDelay) {
-            maxDelay = delay;
-        }
-        else if (delay < minDelay) {
-            minDelay = delay;
-        }
     }
 }
