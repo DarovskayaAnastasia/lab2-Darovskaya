@@ -13,7 +13,7 @@ public class AirportIdMapper extends Mapper<LongWritable, Text, TextPair, Text> 
         String line = value.toString();
         String[] keyValuePair = parseLine(line);
 
-        if ((key.get(0) > 0)) {
+        if (key.get() > 0) {
             TextPair indicatoredKey = new TextPair(Integer.parseInt(keyValuePair[0]), (byte) 0);
             context.write(indicatoredKey, new Text(keyValuePair[1]));
         }
