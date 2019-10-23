@@ -1,11 +1,16 @@
 import org.apache.hadoop.io.RawComparator;
 import org.apache.hadoop.io.WritableComparable;
 
+import static org.graalvm.compiler.word.BarrieredAccess.readInt;
+
 public class FirstComparator implements RawComparator {
 
     @Override
-    public int compare(byte[] bytes, int i, int i1, byte[] bytes1, int i2, int i3) {
-        return 0;
+    public int compare(byte[] b1, int s1, int l1, byte[] b2, int s2, int l2) {
+        Integer i1 = readInt(b1, s1);
+        Integer i2 = readInt(b2, s2);
+
+        return i1.compareTo(i2);
     }
 
     @Override
