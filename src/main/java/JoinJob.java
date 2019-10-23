@@ -15,8 +15,8 @@ public class JoinJob {
         Job job = Job.getInstance();
         job.setJarByClass(JoinJob.class);
         job.setJobName("JoinJob sort");
-        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirportIdMapper.class);
-        MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, OnTimeMapper.class);
+        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, OnTimeMapper.class);
+        MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, AirportIdMapper.class);
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setPartitionerClass(HashPartitioner.class);
         job.setGroupingComparatorClass(FirstComparator.class);
