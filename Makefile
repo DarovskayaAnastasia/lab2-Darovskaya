@@ -16,7 +16,8 @@ hadoop_stage:
 
 launch_stage:
 	mvn package
-	hadoop jar ~/hadoop-2.9.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.9.2.jar pi 2 5
+	hadoop fs -mkdir /user
+	hadoop fs -mkdir /user/michail
 	hadoop fs -copyFromLocal src/main/resources/664600583_T_ONTIME_sample.csv
 	hadoop fs -copyFromLocal src/main/resources/L_AIRPORT_ID.csv
 	export HADOOP_CLASSPATH=/home/michail/gitwatch/lab2-Darovskaya/target/hadoop-examples-1.0-SNAPSHOT.jar:/home/michail/commons-csv-1.7/commons-csv-1.7-sources.jar:/home/michail/commons-csv-1.7/commons-csv-1.7.jar
