@@ -8,7 +8,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 public class TestClass {
     public static void main(String[] args) throws Exception {
-        
+
     }
 
     private String[] parseLine(String line) throws IOException {
