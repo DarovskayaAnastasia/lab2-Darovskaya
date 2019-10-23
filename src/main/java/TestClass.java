@@ -10,15 +10,16 @@ public class TestClass {
     public static void main(String[] args) throws Exception {
         String line =  "2015,1,1,10,6,2015-01-10,\"AA\",19805,\"AA\",\"N790AA\",\"1\",12478,1247802,31703,12892,\"1225\",\"1235\",0.00,0.00,0.00,\"\",345.00,2475.00";
         String[] test = new String[2];
-        test =
+        test = parseLine(line);
     }
 
-    private String[] parseLine(String line) throws IOException {
+    private static String[] parseLine(String line) throws IOException {
 
         String[] result = new String[2];
 
         CSVParser parser = CSVParser.parse(line, CSVFormat.RFC4180);
         for (CSVRecord record : parser) {
+            System.out.println(record.get(0) + "; " + record.get(12));
             result[0] = record.get(0);
             result[1] = record.get(17);
         }
