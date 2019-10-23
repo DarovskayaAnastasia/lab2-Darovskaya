@@ -17,7 +17,7 @@ public class TestClass {
 
         CSVParser parser = CSVParser.parse(line, CSVFormat.RFC4180);
         for (CSVRecord record : parser) {
-            System.out.println(record.get(0) + "; " + record.get(12));
+            System.out.println(record.get(14) + "; " + record.get(17));
             result[0] = record.get(14);
             result[1] = record.get(17);
         }
