@@ -19,6 +19,8 @@ public class FirstComparator implements RawComparator {
     }
 
     public int compare(WritableComparable a, WritableComparable b) {
-        return a.compareTo(b);
+        TextPair pair1 = (TextPair)a;
+        TextPair pair2 = (TextPair)b;
+        return pair1.getID().compareTo(pair2.getID());
     }
 }
