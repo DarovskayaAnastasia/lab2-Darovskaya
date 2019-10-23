@@ -11,7 +11,7 @@ public class JoinReducer extends Reducer<TextPair, Text, IntWritable, Text> {
         Iterator<Text> iter = values.iterator();
         Text name = new Text(iter.next());
 
-        System.out.println("ITERATOR INFORMATION: " + iter.next().toString());
+        throw new IOException("ITERATOR INFORMATION: " + iter.next().toString());
 
         float maxDelay = Float.MIN_VALUE;
         float minDelay = Float.MAX_VALUE;
