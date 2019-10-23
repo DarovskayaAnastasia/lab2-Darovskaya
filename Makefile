@@ -20,7 +20,7 @@ launch_stage:
 	hadoop fs -copyFromLocal src/main/resources/664600583_T_ONTIME_sample.csv
 	hadoop fs -copyFromLocal src/main/resources/L_AIRPORT_ID.csv
 	export HADOOP_CLASSPATH=home/michail/gitwatch/lab2-Darovskaya/target/hadoop-examples-1.0-SNAPSHOT-shaded.jar
-	hadoop JoinJob 664600583_T_ONTIME_sample.csv L_AIRPORT_ID.csv output
+	hadoop JoinJob L_AIRPORT_ID.csv 664600583_T_ONTIME_sample.csv output
 	hadoop fs -copyToLocal output
 
 clean:
