@@ -11,8 +11,7 @@ public class OnTimeMapper extends Mapper<LongWritable, Text, TextPair, Text> {
     protected void map(LongWritable key, Text value, Context context) throws
             IOException, InterruptedException {
         String line = value.toString();
-        String[] keyValuePair = new String[2];
-        keyValuePair = parseLine(line);
+        String[] keyValuePair = parseLine(line);
 
         if ((key.get() > 0) && keyValuePair[1] != "") {
             TextPair indicatoredKey = new TextPair(Integer.parseInt(keyValuePair[0]), (byte) 1);
