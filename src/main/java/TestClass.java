@@ -8,7 +8,9 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 public class TestClass {
     public static void main(String[] args) throws Exception {
-        String line =  ""
+        String line =  "2015,1,1,10,6,2015-01-10,\"AA\",19805,\"AA\",\"N790AA\",\"1\",12478,1247802,31703,12892,\"1225\",\"1235\",0.00,0.00,0.00,\"\",345.00,2475.00";
+        String[] test = new String[2];
+        test =
     }
 
     private String[] parseLine(String line) throws IOException {
