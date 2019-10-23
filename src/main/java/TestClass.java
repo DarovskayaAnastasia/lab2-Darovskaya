@@ -3,8 +3,6 @@ import java.io.IOException;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
-import org.apache.hadoop.io.*;
-import org.apache.hadoop.mapreduce.Mapper;
 
 public class TestClass {
     public static void main(String[] args) throws Exception {
